@@ -11,8 +11,6 @@ Supporting data for the report: the full plans, the run times and the row counts
 | `indexes.sql` | The three indexes of Task 2 |
 | `concurrency_demo.sql` | The Task 5.3 script |
 | `F1_rewritten.sql`, `F7_pushed.sql`, `F12_forced.sql` | Query versions used in Tasks 2, 3.3 and 4 |
-| `a2_lab.py`, `run_batch.py` | Helper scripts for plans, run times and the index experiments |
-| `results_batch.txt` | Raw log of the index experiments |
 
 ## Row counts (scale 50)
 
@@ -243,7 +241,7 @@ All times are wall-clock. The last column is the median.
 | F7 as written | 840.2, 332.2, 329.6, 373.1, 337.1 | 337.1 |
 | F7, filter pushed down | 176.4, 110.1, 106.5, 111.2, 112.7 | 111.2 |
 
-The two F7 index runs in `results_batch.txt` (medians 2,574.1 and 4,722.5) were taken while the machine was slow, so the report uses the six-run measurement above.
+The F7 index was first measured while the machine was slow (medians 2,574.1 before and 4,722.5 with the index). The report uses the six-run measurement above instead.
 
 ## Concurrency demo (Task 5.3), like 8
 
