@@ -1,0 +1,1 @@
+SELECT t.track_id,t.title,t.origin_kind,COUNT(DISTINCT v.video_id) n_videos FROM AudioTrack t JOIN Video v ON v.audio_track_id=t.track_id WHERE v.uploaded_at>=strftime('%Y-%m-%dT%H:%M:%SZ',(SELECT MAX(uploaded_at) FROM Video),'-7 days') GROUP BY t.track_id,t.title,t.origin_kind ORDER BY n_videos DESC,t.track_id LIMIT 10;
